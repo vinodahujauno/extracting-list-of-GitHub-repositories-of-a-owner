@@ -45,6 +45,9 @@ qry$queries$list
 # Execute query
 listextraction<- cli$exec(qry$queries$list)
 
+# Convert to proper json format
+listextraction <- jsonlite::fromJSON(listextraction)
+
 # Extract list from query
 List<- data.frame(json_path(listextraction,"$.data.repositoryOwner.repositories.edges.node.name[*]"))
 
