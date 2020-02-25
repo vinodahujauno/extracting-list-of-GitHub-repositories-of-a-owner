@@ -4,7 +4,7 @@ library(rjsonpath) # use to query JSON file
 
 # Create Token
 library("httr")
-token <- '6b47115a7b317428fc98931de337a996ca82a2bd' # write your github token
+token <- '' # write your github token
 cli <- GraphqlClient$new(
   url = "https://api.github.com/graphql",
   headers = add_headers(Authorization = paste0("Bearer ", token))
