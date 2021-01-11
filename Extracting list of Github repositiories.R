@@ -7,7 +7,7 @@ library("httr")
 token <- '' # write your github token
 cli <- GraphqlClient$new(
   url = "https://api.github.com/graphql",
-  headers = add_headers(Authorization = paste0("Bearer ", token))
+  headers = list(Authorization = paste0("Bearer ", token))
 )
 
 # Load Schema
